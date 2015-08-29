@@ -1,0 +1,258 @@
+body {
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+}
+
+.stats {
+    padding: 10px;
+    background: #f6f9fc;
+}
+
+.panel-title {
+    display: inline-block;
+    width: 163px;
+    margin-left: 5px;
+}
+
+.panel-owner {
+    display: inline-block;
+    width: 90px;
+}
+
+.panel-date {
+    display: inline-block;
+    width: 150px;
+}
+
+.panel-state {
+    display: inline-block;
+    width: 98px;
+}
+
+.graphs {
+    display: inline-block;
+    margin: 0;
+    width: 80px;
+    margin-right: 35px;
+}
+
+.panel,
+.panel-heading {
+    border-radius: 0 !important;
+    width: 100%;
+    display: inline-block;
+}
+
+.Pending.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-gray.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Pending.firewall .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 30px;
+    background: url(../images/firewall-gray.png);
+    float: left;
+}
+
+
+/* rejected could be change to Failed, it depends what comes from json as class-name. */
+
+.Rejected.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-red.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Rejected.firewall .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 30px;
+    background: url(../images/firewall-red.png);
+    float: left;
+}
+
+.Running.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-blue.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Running.firewall .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 30px;
+    background: url(../images/firewall-blue.png);
+    float: left;
+}
+
+.Accepted.firewall .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 30px;
+    background: url(../images/firewall-green.png);
+    float: left;
+}
+
+.Accepted.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-green.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Complete.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-green.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Complete.build .panel-heading i {
+    width: 31px;
+    display: inline-block;
+    height: 18px;
+    background: url(../images/comp-green.png);
+    float: left;
+    margin-top: 5px;
+}
+
+.Running .panel-heading {
+    border: 2px solid #4c85b7;
+    /*background: rgba(76,133,183,0.5);*/
+    color: #4d5278;
+}
+
+.Running .progress-bar {
+    background: #5e9cd3;
+}
+
+.Rejected .panel-heading {
+    border: 2px solid #ce3f47;
+    /*background: rgba(206,63,71,0.5);*/
+    color: #ba1534;
+}
+
+.Rejected .progress-bar {
+    background: #be0712;
+}
+
+.Complete .panel-heading {
+    border: 2px solid #87ae6d;
+    /*background: rgba(135,174,109,0.5);*/
+    color: #496547;
+}
+
+.Complete .progress-bar {
+    background: #548039;
+}
+
+.Accepted .panel-heading {
+    border: 2px solid #87ae6d;
+    /*background: rgba(135,174,109,0.5);*/
+    color: #496547;
+}
+
+.Accepted .progress-bar {
+    background: #548039;
+}
+
+.Pending .panel-heading {
+    border: 2px solid #bcbcbb;
+    /*background: rgba(188,188,187,0.5);*/
+    color: #8d8f99;
+}
+
+.titles p {
+    display: inline-block;
+    margin: 10px 31px;
+}
+
+.metrics-sq {
+    display: inline-block;
+    width: 215px;
+    float: left;
+    margin-right: 20px;
+}
+
+.metrics-sq > p {
+    font-weight: bold;
+}
+
+.metrics-sq .stats {
+	height: 155px;
+}
+
+.metrics-sq .stats > div {
+    display: inline-block;
+    margin: 10px;
+    min-width: 55px;
+    text-align: center;
+}
+
+.metrics-sq i {
+	float: none !important;
+}
+
+
+
+
+
+.build-sq {
+    display: inline-block;
+    width: 215px;
+}
+.build-sq > p {
+    font-weight: bold;
+}
+.build-sq .stats {
+	height: 155px;
+}
+
+.build-sq .stats .comp {
+	display: inline-block;
+	height: 105px;
+	margin: 10px;
+}
+.build-sq-date {
+	text-align: center;
+}
+
+
+.increasing i {
+	background: url(../images/increase.png);
+	width: 25px;
+	height: 30px;
+	display: inline-block;
+}
+.equal i {
+	background: url(../images/equal.png);
+	width: 25px;
+	height: 21px;
+	display: inline-block;
+}
+.decreasing i {
+	background: url(../images/decrease.png);
+	width: 25px;
+	height: 30px;
+	display: inline-block;
+}
+

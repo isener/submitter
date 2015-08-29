@@ -1,0 +1,84 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="submitController as vm">
+    <div class="panel panel-default {{group.status}} {{group.type}}" ng-repeat="group in vm.groups">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <i></i>
+            <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{group.id}}" aria-expanded="false" aria-controls="{{group.id}}">
+          {{group.title}}
+        </a>
+      </h4>
+            <p class="panel-owner text-center">
+                {{group.owner}}
+            </p>
+            <p class="panel-date text-center">
+                {{group.timestarted}}
+            </p>
+            <p class="panel-state text-center">
+                {{group.status}}
+            </p>
+            <div class="progress graphs">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{group.metrics}};">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <div class="progress graphs">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{group.build}};">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <div class="progress graphs">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{group.unittest}};">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <div class="progress graphs">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{group.functest}};">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+        </div>
+        <div id="{{group.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <div class="metrics-sq">
+                    <p>Metrics</p>
+                    <div class="stats">
+                        <div class="first {{vm.testIsDecrease[$index]}}">
+                            <i>{{group.test}}</i>
+                            <p>Test</p>
+                        </div>
+                        <div class="second {{vm.maintainIsDecrease[$index]}}">
+                            <i>{{group.maintainability}}</i>
+                            <p>Maintainability</p>
+                        </div>
+                        <div class="third {{vm.securityIsDecrease[$index]}}">
+                            <i>{{group.security}}</i>
+                            <p>Security</p>
+                        </div>
+                        <div class="fourth {{vm.workmanshipIsDecrease[$index]}}">
+                            <i>{{group.workmanship}}</i>
+                            <p>Workmanship</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="build-sq">
+                    <p>Build</p>
+                    <div class="stats">
+                        <div class="comp">
+                          <i></i>
+                          <p>Debug</p>
+                        </div>
+                        <div class="comp">
+                          <i></i>
+                          <p>Release</p>
+                        </div>
+                        <p class="build-sq-date">10:46am - 4/17/2014</p>
+                    </div>
+                </div>
+                <div class="unittest-sq">
+                    <percent-cake></percent-cake>
+                </div>
+                <div class="functest-sq"></div>
+            </div>
+        </div>
+    </div>
+</div>
